@@ -64,3 +64,7 @@ void StartCalculation(FileHelper helper)
     Console.ReadKey();
 }
 
+void ViewHistory(FileHelper helper)
+{
+    
+}
