@@ -69,5 +69,10 @@ void ViewHistory(FileHelper helper)
     Console.Clear();
     Console.WriteLine("==============================");
     Console.WriteLine("          HISTORY             ");
-    Console.WriteLine("==============================")
+    Console.WriteLine("==============================");
+
+    string history = helper.ReadHistory();
+    Console.WriteLine(history);
+    Console.WriteLine("\n Press any key to return...");
+    Console.ReadKey();
 }
