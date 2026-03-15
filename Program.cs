@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.Design;
+using System.Globalization;
 
 FileHelper fileHelper = new FileHelper();
 bool isRunning = true;
@@ -98,4 +99,15 @@ void ClearHistory(FileHelper helper)
 double GetNumber(string prompt)
 {
     Console.Write(prompt);
+    double number;
+    string input = Console.ReadLine()?.Trim();
+    bool isValid = double.TryParse(input, out number);
+
+    while (!isValid)
+    {
+        Console.Write("Please enter a valid number: ");
+        input = Console.ReadLine()?.Trim();
+        isValid = double.TryParse(input, out number);
+    }
+    return number;
 }
