@@ -56,10 +56,11 @@ void showWelcome()
     Console.ReadKey();
 }
 
-void StartCalculation(FileHelper)
+void StartCalculation(FileHelper helper)
 {
     Console.Clear();
     Console.WriteLine("  Starting calculation...");
     Console.WriteLine("  (Coming in Step 2)");
     Console.ReadKey();
 }
+
