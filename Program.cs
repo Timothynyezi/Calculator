@@ -94,3 +94,8 @@ void ClearHistory(FileHelper helper)
     helper.ClearHistory();
     Console.ReadKey();
 }
+
+double GetNumber(string prompt)
+{
+    Console.Write(prompt);
+}

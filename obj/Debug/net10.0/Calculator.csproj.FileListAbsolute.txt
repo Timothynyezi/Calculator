@@ -1,0 +1,15 @@
+/home/thami/Desktop/C#/Calculator/bin/Debug/net10.0/Calculator
+/home/thami/Desktop/C#/Calculator/bin/Debug/net10.0/Calculator.deps.json
+/home/thami/Desktop/C#/Calculator/bin/Debug/net10.0/Calculator.runtimeconfig.json
+/home/thami/Desktop/C#/Calculator/bin/Debug/net10.0/Calculator.dll
+/home/thami/Desktop/C#/Calculator/bin/Debug/net10.0/Calculator.pdb
+/home/thami/Desktop/C#/Calculator/obj/Debug/net10.0/Calculator.GeneratedMSBuildEditorConfig.editorconfig
+/home/thami/Desktop/C#/Calculator/obj/Debug/net10.0/Calculator.AssemblyInfoInputs.cache
+/home/thami/Desktop/C#/Calculator/obj/Debug/net10.0/Calculator.AssemblyInfo.cs
+/home/thami/Desktop/C#/Calculator/obj/Debug/net10.0/Calculator.csproj.CoreCompileInputs.cache
+/home/thami/Desktop/C#/Calculator/obj/Debug/net10.0/Calculator.sourcelink.json
+/home/thami/Desktop/C#/Calculator/obj/Debug/net10.0/Calculator.dll
+/home/thami/Desktop/C#/Calculator/obj/Debug/net10.0/refint/Calculator.dll
+/home/thami/Desktop/C#/Calculator/obj/Debug/net10.0/Calculator.pdb
+/home/thami/Desktop/C#/Calculator/obj/Debug/net10.0/Calculator.genruntimeconfig.cache
+/home/thami/Desktop/C#/Calculator/obj/Debug/net10.0/ref/Calculator.dll
