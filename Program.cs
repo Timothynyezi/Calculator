@@ -66,5 +66,8 @@ void StartCalculation(FileHelper helper)
 
 void ViewHistory(FileHelper helper)
 {
-    
+    Console.Clear();
+    Console.WriteLine("==============================");
+    Console.WriteLine("          HISTORY             ");
+    Console.WriteLine("==============================")
 }
