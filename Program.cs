@@ -1,4 +1,6 @@
-﻿FileHelper fileHelper = new FileHelper();
+﻿using System.ComponentModel.Design;
+
+FileHelper fileHelper = new FileHelper();
 bool isRunning = true;
 
 showWelcome();
@@ -17,6 +19,26 @@ while (isRunning)
     Console.Write("  Choose an option: "); 
 
     string choice = Console.ReadLine()?.Trim();
-    
-      
+
+    switch (choice)
+    {
+        case "1":
+            StartCalculation(fileHelper);
+            break;
+        case "2":
+            ViewHistory(fileHelper);
+            break;
+        case "3":
+            ClearHistory(fileHelper);
+            break;
+        case "0":
+            isRunning = false;
+            ShowGoodbye();
+            break;
+        default:
+            Console.WriteLine("\n Invalid option. Please choose 0 - 3.");
+            Thread.Sleep(1500);
+            break;
+            
+    }  
 }
