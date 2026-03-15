@@ -39,6 +39,19 @@ while (isRunning)
             Console.WriteLine("\n Invalid option. Please choose 0 - 3.");
             Thread.Sleep(1500);
             break;
-            
+
     }  
+}
+
+void showWelcome()
+{
+    Console.Clear();
+    Console.WriteLine("==============================");
+    Console.WriteLine("      WELCOME TO CALCULATOR   ");
+    Console.WriteLine("==============================");
+    Console.WriteLine("  Perform calculations and");
+    Console.WriteLine("  keep track of your history.");
+    Console.WriteLine("------------------------------");
+    Console.WriteLine("  Press any key to start...");
+    Console.ReadKey();
 }
