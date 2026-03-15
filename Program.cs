@@ -111,3 +111,30 @@ double GetNumber(string prompt)
     }
     return number;
 }
+
+string GetOption()
+{
+    Console.WriteLine("\n  Select an operation:");
+    Console.WriteLine("  1. Addition       (+)");
+    Console.WriteLine("  2. Subtraction    (-)");
+    Console.WriteLine("  3. Multiplication (x)");
+    Console.WriteLine("  4. Division       (/)");
+    Console.Write("\n  Choose: ");
+
+    string choice = Console.ReadLine()?.Trim();
+
+    while (choice != "1" && choice != "2" && choice != "3" && choice != "4")
+    {
+        Console.Write("Please choose 1, 2, 3, or 4: ");
+        choice = Console.ReadLine()?.Trim();
+    }
+
+    return choice switch
+    {
+        "1" => "Addition",
+        "2" => "Subtraction",
+        "3" => "Multiplication",
+        "4" => "Division",
+        _   => "Unknown"
+    };
+}
