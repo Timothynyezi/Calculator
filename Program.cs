@@ -76,3 +76,11 @@ void ViewHistory(FileHelper helper)
     Console.WriteLine("\n Press any key to return...");
     Console.ReadKey();
 }
+
+void ClearHistory(FileHelper helper)
+{
+    Console.Clear();
+    Console.WriteLine("  Clearing history...");
+    helper.ClearHistory();
+    Console.ReadKey();
+}
