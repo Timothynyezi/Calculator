@@ -56,6 +56,16 @@ void showWelcome()
     Console.ReadKey();
 }
 
+void ShowGoodbye()
+{
+    Console.Clear();
+    Console.WriteLine("==============================");
+    Console.WriteLine("         GOODBYE!             ");
+    Console.WriteLine("==============================");
+    Console.WriteLine("  Thanks for using Calculator.");
+    Thread.Sleep(2000); 
+}
+
 void StartCalculation(FileHelper helper)
 {
     Console.Clear();
