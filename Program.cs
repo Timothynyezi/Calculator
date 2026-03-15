@@ -14,5 +14,9 @@ while (isRunning)
     Console.WriteLine("  3. Clear History");
     Console.WriteLine("  0. Exit");
     Console.WriteLine("------------------------------");
-    Console.Write("  Choose an option: ");   
+    Console.Write("  Choose an option: "); 
+
+    string choice = Console.ReadLine()?.Trim();
+    
+      
 }
