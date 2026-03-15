@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.Design;
 using System.Globalization;
+using System.Security.Cryptography;
 
 FileHelper fileHelper = new FileHelper();
 bool isRunning = true;
@@ -70,9 +71,61 @@ void ShowGoodbye()
 void StartCalculation(FileHelper helper)
 {
     Console.Clear();
-    Console.WriteLine("  Starting calculation...");
-    Console.WriteLine("  (Coming in Step 2)");
+    Console.WriteLine("==============================");
+    Console.WriteLine("       NEW CALCULATION        ");
+    Console.WriteLine("==============================\n");
+
+    double firstNumber = GetNumber(" Enter first number : ");
+
+    string operation = GetOperation();
+
+    double secondNumber = GetNumber("\n Enter second number : ");
+
+    if (operation == "Division")
+    {
+        while (secondNumber == 0)
+        {
+            Console.WriteLine("Cannot divide by zero!");
+            secondNumber = GetNumber(" Enter a non-zero number: ");
+        }
+    }
+
+    double? result = operation switch
+    {
+        "Addition"      => firstNumber + secondNumber,
+        "Subtraction"   => firstNumber - secondNumber,
+        "Multiplication"=> firstNumber * secondNumber,
+        "Division"      => firstNumber / secondNumber,
+        _               => null
+    };
+
+    Console.WriteLine("\n==============================");
+
+    if (result == null)
+    {
+        Console.WriteLine("Something went wrong");
+    }
+    else
+    {
+        string symbol = operation switch
+        {
+            "Addition"      => "+",
+            "Subtraction"   => "-",
+            "Multiplication"=> "x",
+            "Division"      => "/",
+            _               => "?"
+        };
+
+        string resultLine = $" {firstNumber} {symbol} {secondNumber} = {result:F2}";
+        Console.WriteLine(resultLine);
+        Console.WriteLine("==============================");
+
+        helper.SaveCalculation(resultLine);
+    }
+
+    Console.WriteLine("\n Press any key to return to the menu...");
     Console.ReadKey();
+
 }
 
 void ViewHistory(FileHelper helper)
@@ -112,7 +165,7 @@ double GetNumber(string prompt)
     return number;
 }
 
-string GetOption()
+string GetOperation()
 {
     Console.WriteLine("\n  Select an operation:");
     Console.WriteLine("  1. Addition       (+)");
