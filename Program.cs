@@ -55,3 +55,11 @@ void showWelcome()
     Console.WriteLine("  Press any key to start...");
     Console.ReadKey();
 }
+
+void StartCalculation(FileHelper)
+{
+    Console.Clear();
+    Console.WriteLine("  Starting calculation...");
+    Console.WriteLine("  (Coming in Step 2)");
+    Console.ReadKey();
+}
