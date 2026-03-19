@@ -40,6 +40,9 @@ class FileHelper
 
     public bool HistoryExists()
     {
-        return false;
+        if (!File.Exists(FilePath))
+        {
+            return false;
+        }
     }
 }
