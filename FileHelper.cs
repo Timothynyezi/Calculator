@@ -44,5 +44,9 @@ class FileHelper
         {
             return false;
         }
+
+        // File exists but might be empty - check content as well
+        string contents = File.ReadAllText(FilePath);
+        return !string.IsNullOrWhiteSpace(contents);
     }
 }
