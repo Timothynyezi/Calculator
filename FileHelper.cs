@@ -6,6 +6,8 @@ class FileHelper
     {
         string timestamp = DateTime.Now.ToString("dd MMM yyy HH:mm:sss");
         string line = $"[{timestamp}] {entry.Trim()}{Environment.NewLine}";
+
+        File.AppendAllText(FilePath, line);
     }
 
     public string ReadHistory()
