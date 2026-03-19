@@ -4,7 +4,8 @@ class FileHelper
 
     public void SaveCalculation(string entry)
     {
-        Console.WriteLine("(SaveCalculation coming in step 3)");
+        string timestamp = DateTime.Now.ToString("dd MMM yyy HH:mm:sss");
+        string line = $"[{timestamp}] {entry.Trim()}{Environment.NewLine}";
     }
 
     public string ReadHistory()
