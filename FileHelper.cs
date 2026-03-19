@@ -34,6 +34,7 @@ class FileHelper
             return; // nothing to clear - exit the method early
         }
 
+        File.WriteAllText(FilePath, "");
     
     }
 
