@@ -29,7 +29,12 @@ class FileHelper
 
     public void ClearHistory()
     {
-        
+        if (!File.Exists(FilePath))
+        {
+            return; // nothing to clear - exit the method early
+        }
+
+    
     }
 
     public bool HistoryExists()
