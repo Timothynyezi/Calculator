@@ -137,6 +137,7 @@ void ViewHistory(FileHelper helper)
 
     string history = helper.ReadHistory();
     Console.WriteLine(history);
+
     Console.WriteLine("\n Press any key to return...");
     Console.ReadKey();
 }
@@ -144,9 +145,9 @@ void ViewHistory(FileHelper helper)
 void ClearHistory(FileHelper helper)
 {
     Console.Clear();
-    Console.WriteLine("  Clearing history...");
-    helper.ClearHistory();
-    Console.ReadKey();
+    Console.WriteLine("==============================");
+    Console.WriteLine("        CLEAR HISTORY         ");
+    Console.WriteLine("==============================\n");
 }
 
 double GetNumber(string prompt)
