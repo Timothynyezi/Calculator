@@ -12,7 +12,19 @@ class FileHelper
 
     public string ReadHistory()
     {
-        return "(ReadHistory coming in step 3)";
+        if (!File.Exists(FilePath))
+        {
+            return " No history found. Make a calculation first!";
+        }
+        string contents = File.ReadAllText(FilePath);
+        
+        // Hanlde the cause where the file exists but is empty
+        if (string.IsNullOrWhiteSpace(contents))
+        {
+            return " History is empty.";
+        }
+        return contents;
+    
     }
 
     public void ClearHistory()
