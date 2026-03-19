@@ -29,7 +29,7 @@ class FileHelper
 
     public void ClearHistory()
     {
-        Console.WriteLine("ClearHistory coming in step 3");
+        
     }
 
     public bool HistoryExists()
